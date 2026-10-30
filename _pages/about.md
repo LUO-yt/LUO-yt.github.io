@@ -23,7 +23,7 @@ My research interests include **medical AI** and **generalizable, trustworthy AI
 - **2026.05** — **FetalAgents** has been accepted at **MICCAI 2026** (early acceptance).
 - **2025** — Our team won **1st place in Task 1** of the **MICCAI autoPET/CT IV Challenge**.
 
-<h1 id="publications">Publications</h1>
+<h1 id="publications">📝 Publications</h1>
 
 ## Conference Papers
 
@@ -98,12 +98,12 @@ arXiv:2509.02402, 2025.
 <h1 id="honors-and-awards">🏆 Honors and Awards</h1>
 
 - **2026** — Tang Zhongying Moral Education Scholarship.
-- **2025** — Comprehensive Excellence Scholarship, Tsinghua University (清华大学综合优秀奖学金).
+- **2025** — Comprehensive Excellence Scholarship, Tsinghua University.
 - **2025** — **1st Place, Task 1**, MICCAI autoPET/CT IV Challenge.
 - **2025** — Best Poster Award, Tsinghua University Academic Research Advancement Program.
 - **2024.12** — **Second Prize**, 40th National College Physics Competition (Selected Regions).
-- **2024** — Comprehensive Excellence Scholarship, Tsinghua University (清华大学综合优秀奖学金).
-- **2024** — Volunteer Service Scholarship, Tanwei College, Tsinghua University (探微书院志愿公益奖学金).
+- **2024** — Comprehensive Excellence Scholarship, Tsinghua University.
+- **2024** — Volunteer Service Scholarship, Tanwei College, Tsinghua University.
 
 <h1 id="education">📖 Education</h1>
 
