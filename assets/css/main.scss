@@ -1,0 +1,159 @@
+---
+---
+
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+.paper-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding: 2em 0 2em 0;
+    
+
+    .paper-box-image{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        order: 2;
+        img {
+            max-width: 400px;
+            box-shadow: 3px 3px 6px #888;
+            object-fit: cover;
+        }
+    }
+    
+    .paper-box-text{
+        max-width: 100%;
+        order: 1;
+    }
+    
+    @include breakpoint($medium) {
+        .paper-box-image{
+            justify-content: left;
+            min-width: 200px;
+            max-width: 40%;
+            order: 1;
+        }
+        
+        .paper-box-text{
+            justify-content: left;
+            padding-left: 2em;
+            max-width: 60%;
+            order: 2;
+        }
+
+    }
+
+
+}
+
+$scroll_offset : 2em;
+h1:before, .anchor:before { 
+    content: ''; 
+    display: block; 
+    position: relative; 
+    width: 0; 
+    height: $scroll_offset; 
+    margin-top: -$scroll_offset;
+}
+
+.badge {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+    margin-top: .5em;
+    margin-left: -.5em;
+    color: white;
+    background-color: #00369f;
+    font-size: .8em;
+}
+/* Personal additions; retain AcadHomepage's responsive layout and navigation. */
+html { scroll-behavior: smooth; }
+body { color: #30343b; }
+a { color: #603c83; }
+.masthead { border-top: 3px solid #603c83; }
+.page__content h1 { color: #222633; font-size: 1.55em; margin-top: 1.8em; }
+.page__content h1:first-child { margin-top: .25em; }
+.page__content h2 { font-size: 1.13em; color: #65616c; margin-top: 1.8em; }
+.page__content h3 { font-size: 1.05em; line-height: 1.5; margin: .55em 0; }
+.page__content a { text-underline-offset: 3px; }
+.page__content [id] { scroll-margin-top: 6rem; }
+.author__avatar img { border-radius: 8px; max-width: 170px; padding: 0; }
+.author__name { line-height: 1.5; }
+.contact-line { margin-top: 1em !important; }
+.publication { padding: 1.1em 0 1.3em; border-bottom: 1px solid #e9e6ed; }
+.publication p { margin-bottom: .65em; }
+.publication-venue { color: #603c83; font-size: .8em; font-weight: 700; letter-spacing: .04em; }
+.publication-venue--review { color: #747079; }
+.publication-note { color: #747079; font-size: .88em !important; }
+.paper-links { display: flex; gap: .5em; flex-wrap: wrap; margin-top: .8em !important; }
+.page__content .paper-links a { border: 1px solid #d7cce3; border-radius: 4px; padding: .15em .65em; font-size: .82em; text-decoration: none; }
+.paper-links a:hover { background: #f5f0fa; }
+.site-credit { margin-top: 3em; border-top: 1px solid #e9e6ed; padding: 1.4em 0; color: #747079; font-size: .8em; }
+@media (min-width: 925px) { .sidebar { position: sticky; top: 6em; } }
+@media (max-width: 924px) { .author__avatar img { min-width: 75px; } .author__urls_sm a { margin-left: .4em; } }
+@media (max-width: 600px) { .profile_box { flex-wrap: wrap; gap: .6em; } .author__content { min-width: 0; flex: 1; } .author__urls-wrapper { margin-left: 0; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 600px) {
+  .profile_box { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: .5em 1em; align-items: center; }
+  .author__avatar { width: 80px; }
+  .author__content { padding-left: 0; }
+  .sidebar .author__name { font-size: 1.1em; }
+  .author__urls-wrapper { grid-column: 2; margin: 0; }
+  .author__urls_sm { font-size: 1.25em; padding: 0; }
+  .author__urls_sm a { margin: 0 .6em 0 0; }
+}
+
+/* Keep the email visible in the profile at every viewport size. */
+.author__urls a { overflow-wrap: anywhere; }
+.author__urls li { white-space: normal; }
+@media (max-width: 924px) {
+  .profile_box { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: .5em 1em; align-items: center; }
+  .author__avatar { width: 80px; }
+  .author__content { padding-left: 0; }
+  .author__urls-wrapper { grid-column: 1 / -1; margin: 0; width: 100%; }
+  .author__urls_sm { display: flex; align-items: center; flex-wrap: wrap; gap: .75em; font-size: 1.2em; padding: 0; }
+  .author__urls_sm a { margin: 0; }
+  .author__urls_sm .profile-email { display: inline-flex; align-items: center; gap: .4em; min-width: 0; font-size: 13px; }
+  .profile-email span { overflow-wrap: anywhere; }
+}
